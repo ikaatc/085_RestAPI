@@ -26,6 +26,9 @@ object DestinasiEntry : DestinasiNavigasi {
     override val titleRes = "Entry Siswa"
 }
 
+@Composable
+fun EntryKontakScreen() {}
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FormInputSiswa(

@@ -94,6 +94,8 @@ fun EntryKontakBody(
             onClick = onSaveClick,
             shape = MaterialTheme.shapes.small,
             modifier = Modifier.fillMaxWidth()
-        ) {}
+        ) {
+            Text(text = "Simpan")
+        }
     }
 }

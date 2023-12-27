@@ -49,6 +49,7 @@ fun KontakApp(
 fun TopAppBarKontak(
     title: String,
     canNavigateBack: Boolean,
+    modifier: Modifier = Modifier,
 ) {}
 
 @OptIn(ExperimentalMaterial3Api::class)

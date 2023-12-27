@@ -37,6 +37,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.pakeapi.R
 import com.example.pakeapi.model.Kontak
 import com.example.pakeapi.navigation.DestinasiNavigasi
+import com.example.pakeapi.ui.TopAppBarKontak
 import com.example.pakeapi.ui.home.viewmodel.HomeViewModel
 import com.example.pakeapi.ui.home.viewmodel.KontakUIState
 import com.example.pakeapi.ui.home.viewmodel.PenyediaViewModel
@@ -176,5 +177,14 @@ fun HomeScreen(
 
     Scaffold(
         modifier = modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
+        topBar = {
+            TopAppBarKontak(
+                title = DestinasiHome.titleRes,
+                canNavigateBack = false,
+                scrollBehavior = scrollBehavior
+            ) {
+
+            }
+        }
         ) {}
 }

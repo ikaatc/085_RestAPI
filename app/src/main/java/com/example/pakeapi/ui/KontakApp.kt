@@ -48,6 +48,7 @@ fun KontakApp(
 @Composable
 fun TopAppBarKontak(
     title: String,
+    canNavigateBack: Boolean,
 ) {}
 
 @OptIn(ExperimentalMaterial3Api::class)

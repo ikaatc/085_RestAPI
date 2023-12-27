@@ -16,6 +16,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.example.pakeapi.ui.home.viewmodel.InsertUiEvent
+import com.example.pakeapi.ui.home.viewmodel.InsertUiState
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -72,4 +73,9 @@ fun FormInputSiswa(
 }
 
 @Composable
-fun EntryKontakBody() {}
+fun EntryKontakBody(
+    insertUiState: InsertUiState,
+    onKontakValueChange: (InsertUiEvent) -> Unit,
+    onSaveClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {}

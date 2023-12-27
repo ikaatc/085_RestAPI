@@ -52,6 +52,7 @@ fun TopAppBarKontak(
     canNavigateBack: Boolean,
     modifier: Modifier = Modifier,
     scrollBehavior: TopAppBarScrollBehavior? = null,
+    navigateUp: () -> Unit
 ) {}
 
 @OptIn(ExperimentalMaterial3Api::class)

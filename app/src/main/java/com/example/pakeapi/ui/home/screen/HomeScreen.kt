@@ -183,8 +183,8 @@ fun HomeScreen(
             TopAppBarKontak(
                 title = DestinasiHome.titleRes,
                 canNavigateBack = false,
-                scrollBehavior = scrollBehavior,
-            )
+                scrollBehavior = scrollBehavior
+            ) {}
         },
         floatingActionButton = {
             FloatingActionButton(

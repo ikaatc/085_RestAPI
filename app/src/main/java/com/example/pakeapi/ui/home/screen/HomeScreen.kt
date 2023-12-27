@@ -29,10 +29,13 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.pakeapi.R
 import com.example.pakeapi.model.Kontak
 import com.example.pakeapi.navigation.DestinasiNavigasi
+import com.example.pakeapi.ui.home.viewmodel.HomeViewModel
 import com.example.pakeapi.ui.home.viewmodel.KontakUIState
+import com.example.pakeapi.ui.home.viewmodel.PenyediaViewModel
 
 @Composable
 fun HomeStatus(
@@ -162,4 +165,5 @@ fun HomeScreen(
     navigateToItemEntry: () -> Unit,
     modifier: Modifier = Modifier,
     onDetailClick: (Int) -> Unit = {},
+    viewModel: HomeViewModel = viewModel(factory = PenyediaViewModel.Factory)
 ) {}

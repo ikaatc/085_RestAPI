@@ -28,6 +28,7 @@ import com.example.pakeapi.ui.home.viewmodel.InsertUiEvent
 import com.example.pakeapi.ui.home.viewmodel.InsertUiState
 import com.example.pakeapi.ui.home.viewmodel.InsertViewModel
 import com.example.pakeapi.ui.home.viewmodel.PenyediaViewModel
+import kotlinx.coroutines.launch
 
 object DestinasiEntry : DestinasiNavigasi {
     override val route = "item_entry"
@@ -54,7 +55,17 @@ fun EntryKontakScreen(
                 navigateUp = navigateBack
             )
         }
-    ) {}
+    ) { innerPadding ->
+        EntryKontakBody(
+            insertUiState = viewModel.insertKontakState,
+            onKontakValueChange = viewModel::updateInsertKontakState,
+            onSaveClick = {
+                coroutineScope.launch {
+                    viewModel.insertKontak()
+                    navigateBack
+                }
+            })
+    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)

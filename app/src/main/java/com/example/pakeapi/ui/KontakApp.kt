@@ -46,7 +46,9 @@ fun KontakApp(
 }
 
 @Composable
-fun TopAppBarKontak() {}
+fun TopAppBarKontak(
+    title: String,
+) {}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

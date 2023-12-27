@@ -158,4 +158,8 @@ object DestinasiHome : DestinasiNavigasi {
 }
 
 @Composable
-fun HomeScreen() {}
+fun HomeScreen(
+    navigateToItemEntry: () -> Unit,
+    modifier: Modifier = Modifier,
+    onDetailClick: (Int) -> Unit = {},
+) {}

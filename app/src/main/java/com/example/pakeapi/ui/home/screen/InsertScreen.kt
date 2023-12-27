@@ -57,6 +57,13 @@ fun FormInputSiswa(
             enabled = enabled
         )
 
+        if (enabled) {
+            Text(
+                text = "Isi semua data",
+                modifier = Modifier.padding(start = 12.dp)
+            )
+        }
+
         Divider(
             thickness = 8.dp,
             modifier = Modifier.padding(bottom = 12.dp)

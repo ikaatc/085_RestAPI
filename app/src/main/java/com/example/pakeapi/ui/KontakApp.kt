@@ -45,11 +45,13 @@ fun KontakApp(
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TopAppBarKontak(
     title: String,
     canNavigateBack: Boolean,
     modifier: Modifier = Modifier,
+    scrollBehavior: TopAppBarScrollBehavior? = null,
 ) {}
 
 @OptIn(ExperimentalMaterial3Api::class)

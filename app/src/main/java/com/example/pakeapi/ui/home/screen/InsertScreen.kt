@@ -17,8 +17,14 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
+import com.example.pakeapi.navigation.DestinasiNavigasi
 import com.example.pakeapi.ui.home.viewmodel.InsertUiEvent
 import com.example.pakeapi.ui.home.viewmodel.InsertUiState
+
+object DestinasiEntry : DestinasiNavigasi {
+    override val route = "item_entry"
+    override val titleRes = "Entry Siswa"
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

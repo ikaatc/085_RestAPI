@@ -23,6 +23,7 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.pakeapi.navigation.DestinasiNavigasi
+import com.example.pakeapi.ui.TopAppBarKontak
 import com.example.pakeapi.ui.home.viewmodel.InsertUiEvent
 import com.example.pakeapi.ui.home.viewmodel.InsertUiState
 import com.example.pakeapi.ui.home.viewmodel.InsertViewModel
@@ -44,7 +45,15 @@ fun EntryKontakScreen(
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
 
     Scaffold(
-        modifier = modifier.nestedScroll(scrollBehavior.nestedScrollConnection)
+        modifier = modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
+        topBar = {
+            TopAppBarKontak(
+                title = DestinasiEntry.titleRes,
+                canNavigateBack = true,
+                scrollBehavior = scrollBehavior,
+                navigateUp = navigateBack
+            )
+        }
     ) {}
 }
 

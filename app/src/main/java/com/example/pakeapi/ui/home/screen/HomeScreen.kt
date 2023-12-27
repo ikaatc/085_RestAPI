@@ -183,7 +183,7 @@ fun HomeScreen(
             TopAppBarKontak(
                 title = DestinasiHome.titleRes,
                 canNavigateBack = false,
-                scrollBehavior = scrollBehavior
+                scrollBehavior = scrollBehavior,
             )
         },
         floatingActionButton = {
@@ -198,5 +198,17 @@ fun HomeScreen(
                 )
             }
         }
-        ) {}
+        ) { innerPadding ->
+        HomeStatus(
+            kontakUIState = viewModel.kontakUIState,
+            retryAction = {
+                          viewModel.getKontak()
+            },
+            modifier = Modifier.padding(innerPadding),
+            onDetailClick = {
+                viewModel.deleteKontak(it.id)
+                viewModel.getKontak()
+            }
+        )
+    }
 }

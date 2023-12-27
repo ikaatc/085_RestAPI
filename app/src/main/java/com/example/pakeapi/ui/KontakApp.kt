@@ -53,7 +53,11 @@ fun TopAppBarKontak(
     modifier: Modifier = Modifier,
     scrollBehavior: TopAppBarScrollBehavior? = null,
     navigateUp: () -> Unit
-) {}
+) {
+    CenterAlignedTopAppBar(
+        title = { /*TODO*/ }
+    )
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

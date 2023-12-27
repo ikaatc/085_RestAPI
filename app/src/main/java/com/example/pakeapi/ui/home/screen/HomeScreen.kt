@@ -78,6 +78,7 @@ fun KontakLayout(
     kontak : List<Kontak>,
     modifier: Modifier = Modifier,
     onDetailClick: (Kontak) -> Unit,
+    onDeleteClick: (Kontak) -> Unit = {}
 ){
     LazyColumn(
         modifier = modifier,
